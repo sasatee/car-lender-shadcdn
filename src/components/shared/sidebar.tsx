@@ -5,6 +5,7 @@ import { useSidebar } from '@/hooks/use-sidebar';
 import { cn } from '@/lib/utils';
 import { ChevronsLeft } from 'lucide-react';
 import { useState } from 'react';
+import { ModeToggle } from './theme-toggle';
 
 type SidebarProps = {
   className?: string;
@@ -28,6 +29,9 @@ export default function Sidebar({ className }: SidebarProps) {
         className
       )}
     >
+      <div className="flex items-center px-0 py-5 md:px-2">
+        <ModeToggle />
+      </div>
       <div
         className={cn(
           'flex items-center px-0 py-5 md:px-2',
